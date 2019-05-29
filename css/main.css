@@ -6955,3 +6955,18 @@ label.panel-block {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+html {
+  background-color: blue; }
+
+#navMenu {
+  position: relative;
+  right: 2%; }
+  #navMenu a {
+    margin: 0 1.5em 0 1.5em; }
+
+.footer {
+  background-color: #4a4a4a; }
+  .footer a {
+    text-decoration: none;
+    cursor: pointer; }

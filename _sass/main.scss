@@ -24,5 +24,26 @@ $primary-invert: $pink-invert;
 // ---------------------------------------- //
 // ------------- CUSTOM SASS -------------- //
 
+html {
+  background-color: blue;
+}
+
+#navMenu {
+  position: relative;
+  right: 2%;
+
+  a {
+    margin: 0 1.5em 0 1.5em;
+  }
+}
+
+.footer {
+  background-color: $grey-dark;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+} 
+
 
 
