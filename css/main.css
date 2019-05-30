@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Gunplay W01 Regular";
+  src: url("fonts/1413068/238c8719-21d1-4219-b53b-559d0070f12c.eot?#iefix");
+  src: url("fonts/1413068/238c8719-21d1-4219-b53b-559d0070f12c.eot?#iefix") format("eot"), url("fonts/1413068/726f6155-556e-4042-847c-cfb31691d019.woff2") format("woff2"), url("fonts/1413068/a981d5bd-91ba-4f06-885a-9fb1d2a230fa.woff") format("woff"), url("fonts/1413068/7b75d27b-1b93-4e56-8bbc-867ecd6eac80.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Gunplay W05_3D";
+  src: url("fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix");
+  src: url("fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix") format("eot"), url("fonts/5102962/fdb0cf46-029f-4b3e-b928-de972eb2c82f.woff2") format("woff2"), url("fonts/5102962/118e9dae-f67d-4958-9bdf-02f70a18d36c.woff") format("woff"), url("fonts/5102962/8606c9cc-8be7-4b33-a0d6-6c9976dd3280.ttf") format("truetype"); }
+
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6957,13 +6967,23 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 html {
-  background-color: blue; }
+  background-color: #b5b5b5; }
+
+.navbar {
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 #navMenu {
   position: relative;
   right: 2%; }
   #navMenu a {
     margin: 0 1.5em 0 1.5em; }
+
+#landing-title {
+  margin: 3em 0 0 5em;
+  font-family: "Gunplay W01 Regular";
+  letter-spacing: 0.05rem;
+  font-weight: 100; }
 
 .footer {
   background-color: #4a4a4a; }

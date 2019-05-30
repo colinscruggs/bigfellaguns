@@ -13,16 +13,33 @@
   <title>Big Fella Guns</title>
 
   <!-- CSS import (compiled down from SASS) -->
+  <!-- <style>
+      @font-face{
+            font-family:"Gunplay W01 Regular";
+            src:url("fonts/1413068/238c8719-21d1-4219-b53b-559d0070f12c.eot?#iefix");
+            src:url("fonts/1413068/238c8719-21d1-4219-b53b-559d0070f12c.eot?#iefix") format("eot"),url("fonts/1413068/726f6155-556e-4042-847c-cfb31691d019.woff2") format("woff2"),url("fonts/1413068/a981d5bd-91ba-4f06-885a-9fb1d2a230fa.woff") format("woff"),url("fonts/1413068/7b75d27b-1b93-4e56-8bbc-867ecd6eac80.ttf") format("truetype");
+        }
+      
+      @font-face{
+        font-family:"Gunplay W05_3D";
+        src:url("Fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix");
+        src:url("Fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix") format("eot"),url("Fonts/5102962/fdb0cf46-029f-4b3e-b928-de972eb2c82f.woff2") format("woff2"),url("Fonts/5102962/118e9dae-f67d-4958-9bdf-02f70a18d36c.woff") format("woff"),url("Fonts/5102962/8606c9cc-8be7-4b33-a0d6-6c9976dd3280.ttf") format("truetype");
+      }
+
+  </style> -->
   <link rel="stylesheet" href="css/main.css">
+  
 </head>
 
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- ------ NAV BAR ------ -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <!-- Navbar brand logo -->
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Big Fella Guns logo" width="112" height="28">
+        <!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Big Fella Guns logo" width="112" height="28"> -->
+        <h3 class="title is-4 has-text-light"> Big Fella Guns </h3>
       </a>
 
       <!-- Navabar burger menu -->
@@ -59,6 +76,34 @@
     </div>
   </nav>
 
+  <!-- ------ BODY ------ -->
+  <section class="hero is-light is-large">
+
+    <div class="hero-head" id="landing-title">
+
+      <div class="container">
+        <h1 class="title">
+          Welcome to Big Fella Guns
+        </h1>
+
+      </div>
+    </div>
+
+    </div>
+
+    <div class="hero-body" id="landing-body">
+
+      <div class="columns is-mobile">
+        <div class="column is-half is-full-mobile">
+          <p class="is-3" id="description"></p>
+        </div>
+      </div> <!-- end columns -->
+    </div> <!-- end Hero Body -->
+
+  </section>
+
+
+  <!-- ------ FOOTER ------ -->
   <footer class="footer has-text-centered">
     <div class="container">
       <div class="columns">
@@ -79,5 +124,7 @@
   <script type="text/javascript" src="lib/main.js"></script>
 
 </body>
+
+
 
 </html>
