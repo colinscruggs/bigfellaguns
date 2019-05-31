@@ -6979,11 +6979,42 @@ html {
   #navMenu a {
     margin: 0 1.5em 0 1.5em; }
 
+.hero-head {
+  background-color: antiquewhite; }
+
 #landing-title {
-  margin: 3em 0 0 5em;
+  margin: 3rem 0 0 5rem;
   font-family: "Gunplay W01 Regular";
   letter-spacing: 0.05rem;
   font-weight: 100; }
+
+.hero-body {
+  background-color: aliceblue; }
+  .hero-body #call-to-action {
+    margin: 2rem 0 0 0; }
+  .hero-body #description {
+    background-color: #06bcef; }
+  .hero-body #landing-gallery {
+    background-color: #ff8080; }
+  .hero-body #landing-icons {
+    margin: 4rem 0 0 0; }
+    @media screen and (max-width: 400px) {
+      .hero-body #landing-icons {
+        margin: 2rem 0 0 0; } }
+    @media screen and (max-width: 400px) {
+      .hero-body #landing-icons .image {
+        position: relative;
+        left: 3rem; } }
+    .hero-body #landing-icons .big-icon {
+      margin: auto 0;
+      position: relative;
+      max-width: 12rem;
+      right: 1.8rem;
+      padding: 1rem; }
+      @media screen and (max-width: 400px) {
+        .hero-body #landing-icons .big-icon {
+          max-width: 14rem;
+          left: 0rem; } }
 
 .footer {
   background-color: #4a4a4a; }
