@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // enable Owl Carousel
+  $(".owl-carousel").owlCarousel();
 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);

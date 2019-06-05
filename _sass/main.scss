@@ -20,22 +20,15 @@
 }
 
 // ----- Initial Variables ----- //
-$blue: #06bcef;
-$pink: #ff8080;
-$pink-invert: #fff;
 $family-sans-serif: "Helvetica",
 "Arial",
 sans-serif;
 
-$break-small: 400px;
+$break-small: 420px;
 $break-large: 1200px;
 
 $gunplay: "Gunplay W01 Regular";
 $gunplay3D: "Gunplay W05_3D";
-
-// ------ Derived Variables ----- //
-$primary: $pink;
-$primary-invert: $pink-invert;
 
 // Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
@@ -45,7 +38,7 @@ $primary-invert: $pink-invert;
 // ------------- CUSTOM SASS -------------- //
 
 html {
-  background-color: $grey-light;
+  background-color: $white;
 }
 
 .navbar {
@@ -62,27 +55,43 @@ html {
   }
 }
 
-.hero-head {
-  background-color: antiquewhite;
-}
-
 
 #landing-title {
   margin: 3rem 0 0 5rem;
   font-family: $gunplay;
   letter-spacing: 0.05rem;
   font-weight: 100;
+  position: relative;
+
+  
+  @media screen and (max-width: $break-small) {
+    font-size: 24px;
+    padding: 2rem 0 0.5rem 0;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .container {
+    text-align: center;
+    .title {
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+
+  
 }
 
 .hero-body {
-  background-color: aliceblue;
 
   #call-to-action {
     margin: 2rem 0 0 0;
   }
 
   #description {
-    background-color: #06bcef;
+    background-color: $white;
+    border: 2px solid $grey-dark;
+    border-radius: 5px;
   }
 
   #landing-gallery {
