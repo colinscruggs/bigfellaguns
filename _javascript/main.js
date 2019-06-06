@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $('.owl-carousel').owlCarousel({
       loop:true,
-      margin:10,
+      margin:20,
       nav:true,
       lazyLoad: true,
       autoplay:true,
       autoplayTimeout:2500,
       autoplayHoverPause:true,
+      items: 3,
       responsive:{
           0:{
               items:1
@@ -41,8 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
           1000:{
               items:5
           }
-      }
+      },
   })
+
+  $('.custom1').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    margin:30,
+    stagePadding:30,
+    smartSpeed:450
+});
 
     // document.getElementsByClassName(".owl-carousel").ownCarousel();
   });

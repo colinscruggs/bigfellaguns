@@ -7000,6 +7000,13 @@ html {
 #landing-description {
   margin: 1rem; }
 
+#gallery-title {
+  font-family: "Gunplay W01 Regular";
+  color: #fafafa;
+  letter-spacing: 0.05rem;
+  font-weight: 100;
+  margin: 0.6rem 0 0 1rem; }
+
 .hero-body {
   margin-top: 4em;
   padding: 1rem; }
