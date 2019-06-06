@@ -7006,7 +7006,7 @@ html {
   border-radius: 5px; }
 
 .hero-body #landing-gallery {
-  background-color: #ff8080; }
+  padding: 0 4rem 0 4rem; }
 
 .hero-body #landing-icons {
   margin: 4rem 0 0 0; }
