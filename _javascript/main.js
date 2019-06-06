@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
       loop:true,
       margin:10,
       nav:true,
+      lazyLoad: true,
+      autoplay:true,
+      autoplayTimeout:2500,
+      autoplayHoverPause:true,
       responsive:{
           0:{
               items:1

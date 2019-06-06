@@ -6980,7 +6980,7 @@ html {
     margin: 0 1.5em 0 1.5em; }
 
 #landing-title {
-  margin: 3rem 0 0 5rem;
+  margin: 1em;
   font-family: "Gunplay W01 Regular";
   letter-spacing: 0.05rem;
   font-weight: 100;
@@ -6988,7 +6988,7 @@ html {
   @media screen and (max-width: 420px) {
     #landing-title {
       font-size: 24px;
-      padding: 2rem 0 0.5rem 0;
+      padding: 1rem 0 0.5rem 0;
       max-width: 75%;
       margin: 0 auto; } }
   #landing-title .container {
@@ -6997,38 +6997,59 @@ html {
       display: inline-block;
       margin: 0 auto; }
 
-.hero-body #call-to-action {
-  margin: 2rem 0 0 0; }
+#landing-description {
+  margin: 1rem; }
 
-.hero-body #description {
-  background-color: white;
-  border: 2px solid #4a4a4a;
-  border-radius: 5px; }
+.hero-body {
+  margin-top: 4em;
+  padding: 1rem; }
+  .hero-body #call-to-action {
+    margin: 1rem;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .hero-body #description {
+    background-color: #fefefe;
+    border: 2px solid #4a4a4a;
+    border-radius: 5px; }
+  .hero-body #landing-gallery-container {
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color: #4a4a4a;
+    border-radius: 5px;
+    height: 300px;
+    margin: 2em 6rem 2rem 6rem; }
+    @media screen and (max-width: 420px) {
+      .hero-body #landing-gallery-container {
+        height: 200px;
+        margin: 2em 1rem 2rem 1rem; } }
+    .hero-body #landing-gallery-container #landing-gallery {
+      padding: 0rem 1rem 0 1rem; }
+      .hero-body #landing-gallery-container #landing-gallery .item {
+        margin-top: 1rem; }
+        @media screen and (max-width: 420px) {
+          .hero-body #landing-gallery-container #landing-gallery .item {
+            height: 200px; } }
 
-.hero-body #landing-gallery {
-  padding: 0 4rem 0 4rem; }
-
-.hero-body #landing-icons {
+#landing-icons {
   margin: 4rem 0 0 0; }
   @media screen and (max-width: 420px) {
-    .hero-body #landing-icons {
+    #landing-icons {
       margin: 2rem 0 0 0; } }
   @media screen and (max-width: 420px) {
-    .hero-body #landing-icons .image {
+    #landing-icons .image {
       position: relative;
       left: 3rem; } }
-  .hero-body #landing-icons .big-icon {
+  #landing-icons .big-icon {
     margin: auto 0;
     position: relative;
     max-width: 12rem;
     right: 1.8rem;
     padding: 1rem; }
     @media screen and (max-width: 420px) {
-      .hero-body #landing-icons .big-icon {
+      #landing-icons .big-icon {
         max-width: 14rem;
         left: 0rem; } }
 
 .footer {
+  margin-top: 4em;
   background-color: #4a4a4a; }
   .footer a {
     text-decoration: none;
