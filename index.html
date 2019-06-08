@@ -12,7 +12,7 @@
   <!-- TODO: add favicon -->
   <title>Big Fella Guns</title>
 
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Ops+One|IBM+Plex+Sans|Rubik:900&display=swap" >
   <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -26,9 +26,8 @@
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <!-- Navbar brand logo -->
     <div class="navbar-brand">
-      <a class="navbar-item" href="#">
-        <!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Big Fella Guns logo" width="112" height="28"> -->
-        <h3 class="title is-4 has-text-light"> Big Fella Guns </h3>
+      <a class="navbar-item" href="index.html">
+        <h3 class="title is-4 has-text-light"> Big Fella Guns </h3>            
       </a>
 
       <!-- Navabar burger menu -->
@@ -46,19 +45,19 @@
     <!-- Navbar menu items -->
     <div class="navbar-menu" id="navMenu">
       <div class="navbar-end">
-        <a class="navbar-item" onclick="fireSWAL()" href="#">
+        <a class="navbar-item" onclick="aboutSWAL()">
           About
         </a>
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="catalog.html">
           Catalog
         </a>
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="policies.html">
           Policies
         </a>
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" onclick="exportSWAL()">
           ITAR & Export Controls
         </a>
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="contact.html">
           Contact
         </a>
       </div>
@@ -89,7 +88,7 @@
 
           </p>
 
-          <a class="button is-large is-danger" id="call-to-action">View Catalog</a>
+          <a class="button is-large is-danger" id="call-to-action" href="catalog.html">View Catalog</a>
         </div>
 
         <div class="column is-offset-3-desktop is-hidden-mobile is-6" id="landing-gallery-container">

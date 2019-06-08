@@ -1,11 +1,18 @@
 
 
-function fireSWAL() {
+function aboutSWAL() {
   swal({
     title: 'About',
     text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
-    type: 'info',
-    confirmButtonText: 'Return'
+    confirmButtonText: 'Continue'
+  })
+}
+
+function exportSWAL() {
+  swal({
+    title: 'ITAR & Export Controls',
+    text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
+    confirmButtonText: 'Continue'
   })
 }
 
