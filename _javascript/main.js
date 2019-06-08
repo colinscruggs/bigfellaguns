@@ -1,3 +1,14 @@
+
+
+function fireSWAL() {
+  swal({
+    title: 'About',
+    text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
+    type: 'info',
+    confirmButtonText: 'Return'
+  })
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -22,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   $(document).ready(function(){
+    
 
     $('.owl-carousel').owlCarousel({
       loop:true,
@@ -52,7 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     margin:30,
     stagePadding:30,
     smartSpeed:450
-});
+  });
+
+
 
     // document.getElementsByClassName(".owl-carousel").ownCarousel();
   });
