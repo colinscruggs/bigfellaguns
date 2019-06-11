@@ -141,6 +141,14 @@ html {
   }
 }
 
+#contact {
+  margin: 2rem 0 2rem 0;
+
+  @media screen and (max-width: $break-small) {
+    margin: 2rem 0 4rem 0;
+  }
+}
+
 #landing-icons {
   margin: 4rem 0 0 0;
 
@@ -168,6 +176,10 @@ html {
       left: 0rem;
     }
   }
+}
+
+#contact {
+  margin: 4rem 0 0 0 0;
 }
 
 .footer {

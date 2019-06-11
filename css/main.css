@@ -7041,6 +7041,12 @@ html {
           .hero-body #landing-gallery-container #landing-gallery .item {
             height: 200px; } }
 
+#contact {
+  margin: 2rem 0 2rem 0; }
+  @media screen and (max-width: 420px) {
+    #contact {
+      margin: 2rem 0 4rem 0; } }
+
 #landing-icons {
   margin: 4rem 0 0 0; }
   @media screen and (max-width: 420px) {
@@ -7060,6 +7066,9 @@ html {
       #landing-icons .big-icon {
         max-width: 14rem;
         left: 0rem; } }
+
+#contact {
+  margin: 4rem 0 0 0 0; }
 
 .footer {
   background-color: #4a4a4a; }
