@@ -1,5 +1,3 @@
-
-
 function aboutSWAL() {
   swal({
     title: 'About',
@@ -24,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if ($navbarBurgers.length > 0) {
 
     // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
+    $navbarBurgers.forEach(el => {
       el.addEventListener('click', () => {
 
         // Get the target from the "data-target" attribute
@@ -39,44 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  $(document).ready(function(){
-    
-
-    $('.owl-carousel').owlCarousel({
-      loop:true,
-      margin:20,
-      nav:true,
-      lazyLoad: true,
-      autoplay:true,
-      autoplayTimeout:2500,
-      autoplayHoverPause:true,
-      items: 3,
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    lazyLoad: true,
+    autoplay: true,
+    autoplayTimeout: 2500,
+    autoplayHoverPause: true,
+    items: 3,
+    responsive: {
+      0: {
+        items: 1
       },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    },
   })
 
-  $('.custom1').owlCarousel({
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-    items:1,
-    margin:30,
-    stagePadding:30,
-    smartSpeed:450
+  $('#sendMailButton').click(function () {
+    Email.send({
+      // SecureToken: "68a9e875-9398-4d50-a0a4-cce2211cb2bc",
+      To: "colinscruggs97@gmail.com",
+      From: 'hassanbakhtiar@bigfellaguns.com',
+      Subject: "This is the subject",
+      Body: "And this is the body"
+    }).then(
+      // message => alert(message),
+      console.log("EMAIL SENT! Check mailbox.")
+    );
   });
-
-
-
-    // document.getElementsByClassName(".owl-carousel").ownCarousel();
-  });
-
 });
-
