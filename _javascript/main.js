@@ -15,6 +15,9 @@ function exportSWAL() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // boolean flag to control email sending
+  let emailButtonClicked = false;
+
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
@@ -59,16 +62,55 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
-  $('#sendMailButton').click(function () {
-    Email.send({
-      // SecureToken: "68a9e875-9398-4d50-a0a4-cce2211cb2bc",
-      To: "colinscruggs97@gmail.com",
-      From: 'hassanbakhtiar@bigfellaguns.com',
-      Subject: "This is the subject",
-      Body: "And this is the body"
-    }).then(
-      // message => alert(message),
-      console.log("EMAIL SENT! Check mailbox.")
-    );
-  });
+  // if (!emailButtonClicked) {
+    $('#sendMailButton').click(function () {
+      let formInputs = [];
+
+      formInputs.push({
+        type: 'name',
+        inputVal: document.querySelector('#nameInput').value
+      });
+      formInputs.push({
+        type: 'email',
+        inputVal: document.querySelector('#emailInput').value
+      });
+      formInputs.push({
+        type: 'phone',
+        inputVal: document.querySelector('#phoneInput').value
+      });
+      formInputs.push({
+        type: 'country',
+        inputVal: document.querySelector('#countryInput').value
+      });
+      formInputs.push({
+        type: 'subject',
+        inputVal: document.querySelector('#subjectInput').value
+      });
+      formInputs.push({
+        type: 'body',
+        inputVal: document.querySelector('#bodyInput').value
+      });
+
+      console.log(formInputs);
+
+      Email.send({
+        To: "contact@bigfellaguns.com",
+        From: "hassanbakhtiar@bigfellaguns.com",
+        Subject: "Inquiry: " + formInputs[4].inputVal,
+        Body: "Name: " + formInputs[0].inputVal +
+          "\n" + "\n" + "\n Email: " + formInputs[1].inputVal +
+          "\n" + "\n" + "\n Phone: " + formInputs[2].inputVal +
+          "\n" + "\n" + "\n Country of origin: " + formInputs[3].inputVal +
+          "\n" + "\n" + "\n Subject: " + formInputs[4].inputVal +
+          "\n" + "\n" + "\n Body: " + formInputs[5].inputVal
+      }).then(
+        // message => alert(message),
+        console.log("EMAIL SENT! Check mailbox.")
+      );
+      // prevent multiple emails from being sent in the same browser session
+      emailButtonClicked = true; 
+    });
+  // }
+
+
 });
