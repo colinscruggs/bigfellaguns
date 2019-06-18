@@ -2,15 +2,22 @@ function aboutSWAL() {
   swal({
     title: 'About',
     text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
-    confirmButtonText: 'Continue'
+    showCancelButton: true,
+    showConfirmButton: false,
+    cancelButtonText: 'Continue',
+    animation: false
   })
 }
 
 function exportSWAL() {
   swal({
-    title: 'ITAR & Export Controls',
-    text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
-    confirmButtonText: 'Continue'
+    title: 'ITAR Banned/Embargoed Countries',
+    html: `'<p class="is-size-4 title">Under U.S. law, the following countries are banned/embargoed: </p>
+    <p class"=is-size-5 is-subtitle"></p>Afghanistan, Belarus, Central African Republic, Cuba, Cyprus, Eritrea, Fiji, Iran, Iraq, Cote d\'Ivoire, Lebanon, Libya, North Korea, Syria, Vietnam, Myanmar, China, Haiti, Liberia, Rwanda, Somalia, Sri Lanka, Republic of the Sudan (Northern Sudan), Yemen, Zimbabwe, Venezuela, Democratic Republic of the Congo</p>`,
+    showCancelButton: true,
+    showConfirmButton: false,
+    cancelButtonText: 'Continue',
+    animation: false
   })
 }
 
@@ -62,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
-  // if (!emailButtonClicked) {
     $('#sendMailButton').click(function () {
       let formInputs = [];
 
@@ -94,6 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(formInputs);
 
       Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "hassanbakhtiar@bigfellaguns.com",
+        Password: "f3701df1-a6b3-4430-8b9d-ea11847f5385",
         To: "contact@bigfellaguns.com",
         From: "hassanbakhtiar@bigfellaguns.com",
         Subject: "Inquiry: " + formInputs[4].inputVal,
