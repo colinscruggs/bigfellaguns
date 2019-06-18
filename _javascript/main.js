@@ -12,7 +12,12 @@ function aboutSWAL() {
 function exportSWAL() {
   swal({
     title: 'ITAR Banned/Embargoed Countries',
-    html: `'<p class="is-size-4 title">Under U.S. law, the following countries are banned/embargoed: </p>
+    type: 'error',
+    html: `'<p class="is-size-4 title">Under
+    <a href="https://www.pmddtc.state.gov/?id=ddtc_public_portal_itar_landing#sideNav"
+    style="text-decoration: underline"
+    class="landing-icon">U.S. law</a>,
+    the following countries are banned/embargoed: </p>
     <p class"=is-size-5 is-subtitle"></p>Afghanistan, Belarus, Central African Republic, Cuba, Cyprus, Eritrea, Fiji, Iran, Iraq, Cote d\'Ivoire, Lebanon, Libya, North Korea, Syria, Vietnam, Myanmar, China, Haiti, Liberia, Rwanda, Somalia, Sri Lanka, Republic of the Sudan (Northern Sudan), Yemen, Zimbabwe, Venezuela, Democratic Republic of the Congo</p>`,
     showCancelButton: true,
     showConfirmButton: false,
