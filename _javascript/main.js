@@ -32,10 +32,93 @@ function exportSWAL() {
   })
 }
 
+// create variables for all category tabs
+let glock = $( '.glock-tabs' );
+let colt = $( '.colt-tabs' );
+let ruger = $( '.ruger-tabs' );
+let sig = $( '.sig-tabs' );
+let beretta = $( '.beretta-tabs' );
 
-document.addEventListener('DOMContentLoaded', () => {
-  // boolean flag to control email sending
-  let emailButtonClicked = false;
+
+// eventHandler that will toggle the respective category of tabs on catalog.html
+function changeCategory(cat) {
+  switch (cat) {
+    case 'glock':
+      glock.toggle(true);
+      colt.toggle(false);
+      ruger.toggle(false);
+      sig.toggle(false);
+      beretta.toggle(false);
+      break;
+    case 'colt':
+      glock.toggle(false);
+      colt.toggle(true);
+      ruger.toggle(false);
+      sig.toggle(false);
+      beretta.toggle(false);
+      break;
+    case 'ruger':
+      glock.toggle(false);
+      colt.toggle(false);
+      ruger.toggle(true);
+      sig.toggle(false);
+      beretta.toggle(false);
+      break;
+    case 'sig':
+      glock.toggle(false);
+      colt.toggle(false);
+      ruger.toggle(false);
+      sig.toggle(true);
+      beretta.toggle(false);
+      break;
+    case 'beretta':
+      glock.toggle(false);
+      colt.toggle(false);
+      ruger.toggle(false);
+      sig.toggle(false);
+      beretta.toggle(true);
+      break;
+  }
+}
+
+$( document ).ready( () => {
+
+  ////////////////////////////// CATALOG TABS
+
+  // initially toggle all other category tabs on catalog.html
+  colt.toggle();
+  ruger.toggle();
+  sig.toggle();
+  beretta.toggle();
+
+  // click handlers for category buttons on catalog.html
+  $('.glock-btn').click(function() {
+    if(glock) {
+      changeCategory('glock');
+    }
+  });
+  $('.colt-btn').click(function() {
+    if(colt) {
+      changeCategory('colt');
+    }
+  });
+  $('.ruger-btn').click(function() {
+    if(ruger) {
+      changeCategory('ruger');
+    }
+  });
+  $('.sig-btn').click(function() {
+    if(sig) {
+      changeCategory('sig');
+    }
+  });
+  $('.beretta-btn').click(function() {
+    if(beretta) {
+      changeCategory('beretta');
+    }
+  });
+
+  ////////////////////////////// NAVBAR BURGER
 
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -59,6 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  ////////////////////////////// OWL CAROUSEL
+
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 20,
@@ -80,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
   })
+
+  ////////////////////////////// EMAIL
+
+  // boolean flag to control email sending
+  let emailButtonClicked = false;
 
   $('#sendMailButton').click(function () {
     if(!emailButtonClicked) {

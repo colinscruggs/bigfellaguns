@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Colin Scruggs">
-  <meta name="description" content="TODO: ask Hassan for description to use for maximum SEO">
+  <meta name="description" content="Big Fella Guns is a federally licensed arms dealer.">
   <!-- TODO: add favicon -->
   <title>Big Fella Guns</title>
 
@@ -45,28 +45,115 @@
 
     <!-- Navbar menu items -->
     <div class="navbar-menu" id="navMenu">
-      <div class="navbar-end">
-        <a class="navbar-item" onclick="aboutSWAL()">
-          About
-        </a>
-        <a class="navbar-item" href="catalog.html">
-          Catalog
-        </a>
-        <!-- <a class="navbar-item" href="policies.html">
-          Policies
-        </a> -->
-        <a class="navbar-item" onclick="exportSWAL()">
-          ITAR & Export Controls
-        </a>
-        <a class="navbar-item" href="contact.html">
-          Contact
-        </a>
+        <div class="navbar-end">
+          <a class="navbar-item" href="catalog.html">
+            Catalog
+          </a>
+          <!-- <a class="navbar-item" href="policies.html">
+            Policies
+          </a> -->
+          <a class="navbar-item" onclick="exportSWAL()">
+            ITAR & Export Controls
+          </a>
+          <a class="navbar-item" onclick="aboutSWAL()">
+              About
+          </a>
+          <a class="navbar-item" href="contact.html">
+            Contact
+          </a>
+        </div>
       </div>
-    </div>
   </nav>
 
   <!-- ------ BODY ------ -->
 
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-size-1-tablet is-size-2-mobile" id="catalog-title">Catalog
+        <figure style="display: inline-block; padding: 1rem 0 0 0.05em;" class="image is-64x64">
+          <img src="css/svg/006-target.svg" />
+        </figure>
+      </h1>
+      <p class="is-size-5-tablet is-size-6-mobile ">Shown are some of the main
+        manufacturers we provide. Other weapons, makes, accessories and ammunition are available upon request.
+        Available products are subject to distributor inventory limitations.
+      </p>
+    </div>
+  </section>
+
+  <!-- ------- TABS -------- -->
+  <section class="section">
+    <div class="container">
+      <div class="tabs is-centered is-medium-tablet is-small-mobile">
+        <ul>
+          <li class="is-active glock-btn">
+            <a>GLOCK</a>
+          </li>
+          <li class="colt-btn">
+            <a>Colt</a>
+          </li>
+          <li class="ruger-btn">
+            <a>Ruger</a>
+          </li>
+          <li class="sig-btn">
+            <a>SIG SAUER</a>
+          </li>
+          <li class="beretta-btn">
+            <a>Beretta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="tabs glock-tabs is-small is-selected is-centered" >
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+        </ul>
+      </div>
+
+      <div class="tabs colt-tabs is-small is-not-selected is-centered">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+          <li><a>Videos</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+
+      <div class="tabs ruger-tabs is-small is-not-selected is-centered">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+
+          <li><a>Documents</a></li>
+          <li><a>Music</a></li>
+          <li><a>Videos</a></li>
+        </ul>
+      </div>
+
+      <div class="tabs sig-tabs is-small is-not-selected is-centered">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+
+          <li><a>Documents</a></li>
+
+          <li><a>Videos</a></li>
+        </ul>
+      </div>
+
+      <div class="tabs beretta-tabs is-small is-not-selected is-centered">
+        <ul>
+          <li class="is-active"><a>Pictures</a></li>
+
+          <li><a>Videos</a></li>
+          <li><a>Music</a></li>
+          <li><a>Documents</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
 
 
   <!-- ------ FOOTER ------ -->
@@ -76,8 +163,7 @@
         <div class="column is-8-desktop is-offset-2-desktop">
           <p class="has-text-light">
             <small>
-              © Big Gun Fellas ⦁ 2019 ⦁ <a href="https://github.com/colinscruggs"
-              class="has-text-light">View Developer Github</a>
+              © Big Gun Fellas ⦁ 2019 ⦁ <a href="https://github.com/colinscruggs" class="has-text-light">Github</a>
             </small>
           </p>
         </div>
