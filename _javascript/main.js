@@ -1,7 +1,13 @@
 function aboutSWAL() {
   swal({
     title: 'About',
-    text: 'Lorem impsum yada yada, flark gnar wombo gumbo reeeef.',
+    html: `<p class="is-size-5"><strong>Big Fella Guns</strong> is a federally licensed arms provider that strives to put the customer first.
+    All arms are acquired with U.S. federal arms licenses from Lipseys and Zanders distribution companies.</p>
+    <br>
+    <p class="is-size-5">If you'd like to contact Big Fella Guns, please write an email using the form in the Contact page.</p>
+    <br>
+    <p class="is-size-5"> Thank you!</p>
+    `,
     showCancelButton: true,
     showConfirmButton: false,
     cancelButtonText: 'Continue',
@@ -25,6 +31,7 @@ function exportSWAL() {
     animation: false
   })
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   // boolean flag to control email sending
@@ -74,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
-    $('#sendMailButton').click(function () {
+  $('#sendMailButton').click(function () {
+    if(!emailButtonClicked) {
       let formInputs = [];
 
       formInputs.push({
@@ -123,8 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
       );
       // prevent multiple emails from being sent in the same browser session
       emailButtonClicked = true; 
-    });
-  // }
-
-
+    }
+  });
 });
