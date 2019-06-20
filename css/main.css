@@ -8,6 +8,7 @@
   src: url("fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix");
   src: url("fonts/5102962/e8bc5c2c-ad05-4352-a737-b7faa1879bbf.eot?#iefix") format("eot"), url("fonts/5102962/fdb0cf46-029f-4b3e-b928-de972eb2c82f.woff2") format("woff2"), url("fonts/5102962/118e9dae-f67d-4958-9bdf-02f70a18d36c.woff") format("woff"), url("fonts/5102962/8606c9cc-8be7-4b33-a0d6-6c9976dd3280.ttf") format("truetype"); }
 
+/* RGB */
 /*! bulma.io v0.7.5 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -6967,11 +6968,12 @@ label.panel-block {
   padding: 3rem 1.5rem 6rem; }
 
 html {
-  background-color: whitesmoke; }
+  background-color: #edf2f4; }
 
 .navbar {
   box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #edf2f4; }
 
 #navMenu {
   position: relative;
@@ -6980,11 +6982,16 @@ html {
     margin: 0 1.5em 0 1.5em; }
 
 #landing-title {
-  margin: 1em;
+  margin: 0.8em;
   font-family: "Gunplay W01 Regular";
   letter-spacing: 0.05rem;
-  font-weight: 100;
-  position: relative; }
+  font-size: 2.5em;
+  position: relative;
+  color: #333; }
+  #landing-title span {
+    font-size: 1.8em;
+    position: relative;
+    top: 0.2em; }
   @media screen and (max-width: 420px) {
     #landing-title {
       font-size: 24px;
@@ -6998,18 +7005,19 @@ html {
       margin: 0 auto; }
 
 #landing-description {
-  margin: 1rem; }
+  margin: 2em 1em 3em 1em;
+  font-size: 1.5em; }
 
 #gallery-title {
   font-family: "Gunplay W01 Regular";
-  color: #fafafa;
+  color: #edf2f4;
   letter-spacing: 0.05rem;
   font-weight: 100;
   margin: 0.6rem 0 0 1rem; }
 
 .hero {
   margin-bottom: 4em;
-  background-color: whitesmoke; }
+  background-color: #edf2f4; }
 
 .hero-body {
   margin-top: 4em;
@@ -7018,16 +7026,25 @@ html {
   .hero-body #call-to-action {
     margin: 1rem;
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    font-family: 'Rubik', sans-serif; }
+    font-family: 'Rubik', sans-serif;
+    color: #edf2f4;
+    background-color: #8e2129;
+    border-color: #8e2129; }
   .hero-body #description {
-    background-color: #fafafa;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.16);
+    background-color: #edf2f4;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24), 0 1px 4px rgba(0, 0, 0, 0.24);
     border-radius: 5px; }
+    @media screen and (max-width: 420px) {
+      .hero-body #description {
+        margin: 1em;
+        padding: 0.2em;
+        position: relative;
+        bottom: 4em; } }
   .hero-body #landing-gallery-container {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: #4a4a4a;
     border-radius: 5px;
-    height: 300px;
+    height: 25em;
     margin: 2em 6rem 2rem 6rem; }
     @media screen and (max-width: 420px) {
       .hero-body #landing-gallery-container {
@@ -7073,6 +7090,9 @@ html {
 
 #contact {
   margin: 4rem 0 0 0 0; }
+  #contact #sendMailButton {
+    background-color: #8e2129;
+    color: #edf2f4; }
 
 .footer {
   background-color: #4a4a4a; }

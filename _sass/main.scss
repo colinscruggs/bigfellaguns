@@ -30,6 +30,19 @@ $break-large: 1200px;
 $gunplay: "Gunplay W01 Regular";
 $gunplay3D: "Gunplay W05_3D";
 
+/* RGB */
+$gunmetal: rgba(43, 45, 66, 1);
+$gray-blue: rgba(141, 153, 174, 1);
+$off-white: rgba(237, 242, 244, 1);
+$red-pantone: rgba(142, 33, 41, 1);
+$crimson: rgba(216, 0, 50, 1);
+
+$dark-sienna: rgba(70, 18, 32, 1);
+$solid-pink: rgba(140, 47, 57, 1);
+$chestnut: rgba(178, 58, 72, 1);
+$melon: rgba(252, 185, 178, 1);
+$peach: rgba(254, 208, 187, 1);
+
 // Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
@@ -38,12 +51,13 @@ $gunplay3D: "Gunplay W05_3D";
 // ------------- CUSTOM SASS -------------- //
 
 html {
-  background-color: $white-ter;
+  background-color: $off-white;
 }
 
 .navbar {
   box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  color: $off-white;
 }
 
 #navMenu {
@@ -56,11 +70,18 @@ html {
 }
 
 #landing-title {
-  margin: 1em;
+  margin: 0.8em;
   font-family: $gunplay;
   letter-spacing: 0.05rem;
-  font-weight: 100; 
+  font-size: 2.5em; 
   position: relative;
+  color: #333;
+
+  span {
+    font-size: 1.8em;
+    position: relative;
+    top: 0.2em;
+  }
 
   
   @media screen and (max-width: $break-small) {
@@ -80,12 +101,13 @@ html {
 }
 
 #landing-description {
-  margin: 1rem;
+  margin: 2em 1em 3em 1em;
+  font-size: 1.5em;
 }
 
 #gallery-title {
   font-family: $gunplay;
-  color: #fafafa;
+  color: $off-white;
   letter-spacing: 0.05rem;
   font-weight: 100; 
   margin: 0.6rem 0 0 1rem;
@@ -93,7 +115,7 @@ html {
 
 .hero {
   margin-bottom: 4em;
-  background-color: $white-ter;
+  background-color: $off-white;
 }
 
 .hero-body {
@@ -105,20 +127,29 @@ html {
     margin: 1rem;
     box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     font-family: 'Rubik', sans-serif;
+    color: $off-white;
+    background-color: $red-pantone;
+    border-color: $red-pantone;
   }
 
   #description {
-    background-color: $white-bis;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.16);
+    background-color: $off-white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.24), 0 1px 4px rgba(0, 0, 0, 0.24);
     border-radius: 5px;
 
+    @media screen and (max-width: $break-small) {
+      margin: 1em;
+      padding: 0.2em;
+      position: relative;
+      bottom: 4em;
+    }
   }
 
   #landing-gallery-container {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: $grey-dark;
     border-radius: 5px;
-    height: 300px;
+    height: 25em;
     margin: 2em 6rem 2rem 6rem;
 
     @media screen and (max-width: $break-small) {
@@ -184,6 +215,11 @@ html {
 
 #contact {
   margin: 4rem 0 0 0 0;
+
+  #sendMailButton {
+    background-color: $red-pantone;
+    color: $off-white;
+  }
 }
 
 .footer {
