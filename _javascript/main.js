@@ -46,8 +46,19 @@ let coltRifles = $( '.colt-rifles');
 let coltRevolvers = $( '.colt-revolvers');
 
 let ruger = $( '.ruger-tabs' );
+let rugerPistols = $( '.ruger-pistols');
+let rugerRifles = $( '.ruger-rifles');
+let rugerRevolvers = $( '.ruger-revolvers');
+
 let sig = $( '.sig-tabs' );
+let sigPistols = $( '.sig-pistols');
+let sigRifles = $( '.sig-rifles');
+
 let beretta = $( '.beretta-tabs' );
+let berettaPistols = $( '.beretta-pistols');
+let berettaShotguns = $( '.beretta-shotguns');
+let berettaRifles = $( '.beretta-rifles');
+
 
 // create variables for all category tabs
 let glockBtn = $('.glock-btn');
@@ -61,7 +72,8 @@ let tabButtons = [
 ]
 
 let innerTabButtons = [
-  coltPistols, coltRifles, coltRevolvers
+  coltPistols, coltRifles, coltRevolvers,rugerPistols,rugerRifles,rugerRevolvers,
+  sigPistols, sigRifles, berettaPistols, berettaShotguns, berettaRifles
 ]
 
 let invContainer = $( '.inventory-target' );
@@ -100,6 +112,7 @@ function changeCategory(cat, isCategory) {
     case 'colt':
       colt.toggle(true);
       coltBtn.addClass('is-active');
+      coltPistols.addClass('is-active');
       loadInventory('colt', '');
       glock.toggle(false);
       ruger.toggle(false);
@@ -122,6 +135,7 @@ function changeCategory(cat, isCategory) {
     case 'ruger':
       ruger.toggle(true);
       rugerBtn.addClass('is-active');
+      rugerPistols.addClass('is-active');
       loadInventory('ruger', '');
       glock.toggle(false);
       colt.toggle(false);
@@ -129,9 +143,23 @@ function changeCategory(cat, isCategory) {
       beretta.toggle(false);
       break;
 
+
+      case 'ruger-pisols':
+        rugerPistols.addClass('is-active');
+        break;
+
+      case 'ruger-rifles':
+        rugerRifles.addClass('is-active');
+        break;
+
+      case 'ruger-revolvers':
+        rugerRevolvers.addClass('is-active');
+        break;
+
     case 'sig':
       sig.toggle(true);
       sigBtn.addClass('is-active');
+      sigPistols.addClass('is-active');
       loadInventory('sig', '');
       glock.toggle(false);
       colt.toggle(false);
@@ -139,15 +167,36 @@ function changeCategory(cat, isCategory) {
       beretta.toggle(false);
       break;
 
+      case 'sig-pisols':
+        sigPistols.addClass('is-active');
+        break;
+
+      case 'sig-rifles':
+        sigRifles.addClass('is-active');
+        break;
+
     case 'beretta':
       beretta.toggle(true);
       berettaBtn.addClass('is-active');
+      berettaPistols.addClass('is-active');
       loadInventory('beretta', '');
       glock.toggle(false);
       colt.toggle(false);
       ruger.toggle(false);
       sig.toggle(false);
       break;
+
+      case 'beretta-pisols':
+        berettaPistols.addClass('is-active');
+        break;
+
+      case 'beretta-shotguns':
+        berettaShotguns.addClass('is-active');
+        break;
+
+      case 'beretta-rifles':
+        berettaRifles.addClass('is-active');
+        break;
   }
 }
 
@@ -180,23 +229,66 @@ function loadInventory(cat, subCat) {
       }
       break;
 
-
     /////////////////////
 
     case 'ruger':
+      switch (subCat) {
+        case 'pistols':
+            invContainer.load('inventory_pages/ruger-inventory.html #pistols');
+            break;
+      
+          case 'rifles':
+            invContainer.load('inventory_pages/ruger-inventory.html #rifles');
+            break;
+      
+          case 'revolvers':
+            invContainer.load('inventory_pages/ruger-inventory.html #revolvers');
+            break;
 
+          default:
+            invContainer.load('inventory_pages/ruger-inventory.html #pistols');
+            break;
+      }
       break;
 
     /////////////////////
 
     case 'sig':
+      switch (subCat) {
+        case 'pistols':
+            invContainer.load('inventory_pages/sig-inventory.html #pistols');
+            break;
+      
+          case 'rifles':
+            invContainer.load('inventory_pages/sig-inventory.html #rifles');
+            break;
 
+          default:
+            invContainer.load('inventory_pages/sig-inventory.html #pistols');
+            break;
+      }
       break;
 
     /////////////////////
 
     case 'beretta':
+      switch (subCat) {
+        case 'pistols':
+            invContainer.load('inventory_pages/beretta-inventory.html #pistols');
+            break;
+      
+          case 'rifles':
+            invContainer.load('inventory_pages/beretta-inventory.html #rifles');
+            break;
+      
+          case 'shotguns':
+            invContainer.load('inventory_pages/beretta-inventory.html #shotguns');
+            break;
 
+          default:
+            invContainer.load('inventory_pages/beretta-inventory.html #pistols');
+            break;
+      }
       break;
   }
 }
@@ -240,16 +332,50 @@ $( document ).ready( () => {
       changeCategory('ruger', true);
     }
   });
+        rugerPistols.click(function() {
+          changeCategory('ruger-pistols', false);
+          loadInventory('ruger', 'pistols');
+        });
+        rugerRifles.click(function() {
+            changeCategory('ruger-rifles', false);
+            loadInventory('ruger', 'rifles');
+        });
+        rugerRevolvers.click(function() {
+            changeCategory('ruger-revolvers', false);
+            loadInventory('ruger', 'revolvers');
+        });
+
   sigBtn.click(function() {
     if(sig) {
       changeCategory('sig', true);
     }
   });
+        sigPistols.click(function() {
+          changeCategory('sig-pistols', false);
+          loadInventory('sig', 'pistols');
+        });
+        sigRifles.click(function() {
+            changeCategory('sig-rifles', false);
+            loadInventory('sig', 'rifles');
+        });
+
   berettaBtn.click(function() {
     if(beretta) {
       changeCategory('beretta', true);
     }
   });
+        berettaPistols.click(function() {
+          changeCategory('beretta-pistols', false);
+          loadInventory('beretta', 'pistols');
+        });
+        berettaRifles.click(function() {
+            changeCategory('beretta-rifles', false);
+            loadInventory('beretta', 'rifles');
+        });
+        berettaShotguns.click(function() {
+            changeCategory('beretta-shotguns', false);
+            loadInventory('beretta', 'shotguns');
+        });
 
   ////////////////////////////// NAVBAR BURGER
 
