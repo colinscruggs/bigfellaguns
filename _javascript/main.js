@@ -462,9 +462,7 @@ $( document ).ready( () => {
       console.log(formInputs);
 
       Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "hassanbakhtiar@bigfellaguns.com",
-        Password: "f3701df1-a6b3-4430-8b9d-ea11847f5385",
+
         To: "contact@bigfellaguns.com",
         From: "hassanbakhtiar@bigfellaguns.com",
         Subject: "Inquiry: " + formInputs[4].inputVal,

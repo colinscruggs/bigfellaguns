@@ -5181,8 +5181,8 @@ label.panel-block {
   .tabs li {
     display: block; }
     .tabs li.is-active a {
-      border-bottom-color: #3273dc;
-      color: #3273dc; }
+      border-bottom-color: #d80032;
+      color: #d80032; }
   .tabs ul {
     align-items: center;
     border-bottom-color: #dbdbdb;
@@ -6970,6 +6970,10 @@ label.panel-block {
 html {
   background-color: #edf2f4; }
 
+a {
+  color: #d80032;
+  text-decoration-color: #d80032; }
+
 .navbar {
   box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -6981,6 +6985,18 @@ html {
   #navMenu a {
     margin: 0 1.5em 0 1.5em; }
 
+.sub-tabs {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid;
+  margin-bottom: 0; }
+
+.tab-section .container .tabs {
+  margin-bottom: 0; }
+
 .mfgFamilyHeading {
   font-weight: 700;
   font-size: 1.5em;
@@ -6990,10 +7006,10 @@ html {
   margin-top: none; }
 
 #landing-title {
-  margin: 0.8em;
+  margin: 0.8em 0.4em 0.8em 0.4em;
   font-family: "Gunplay W01 Regular";
   letter-spacing: 0.05rem;
-  font-size: 2.5em;
+  font-size: 2.25em;
   position: relative;
   color: #333; }
   #landing-title span {
@@ -7003,7 +7019,8 @@ html {
   @media screen and (max-width: 420px) {
     #landing-title {
       font-size: 24px;
-      padding: 1rem 0 0.5rem 0;
+      margin: 2em 0em 1em 0em;
+      padding: 2rem 0 0.5rem 0;
       max-width: 75%;
       margin: 0 auto; } }
   #landing-title .container {
@@ -7014,14 +7031,24 @@ html {
 
 #landing-description {
   margin: 2em 1em 3em 1em;
-  font-size: 1.5em; }
+  font-size: 1.25em; }
+
+#index-body {
+  margin: 0;
+  padding-bottom: 3em; }
 
 #gallery-title {
   font-family: "Gunplay W01 Regular";
   color: #edf2f4;
   letter-spacing: 0.05rem;
-  font-weight: 100;
-  margin: 0.6rem 0 0 1rem; }
+  font-weight: 100; }
+
+.gallery-header {
+  color: #edf2f4;
+  margin: 1em 0 0.25em 0; }
+  .gallery-header h2 {
+    color: #edf2f4;
+    font-size: 1.1em; }
 
 .hero {
   margin-bottom: 4em;
@@ -7052,7 +7079,7 @@ html {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     background-color: #4a4a4a;
     border-radius: 5px;
-    height: 25em;
+    height: 22em;
     margin: 2em 6rem 2rem 6rem; }
     @media screen and (max-width: 420px) {
       .hero-body #landing-gallery-container {
@@ -7065,12 +7092,6 @@ html {
         @media screen and (max-width: 420px) {
           .hero-body #landing-gallery-container #landing-gallery .item {
             height: 200px; } }
-
-#contact {
-  margin: 2rem 0 2rem 0; }
-  @media screen and (max-width: 420px) {
-    #contact {
-      margin: 2rem 0 4rem 0; } }
 
 .landing-icon {
   text-decoration: none;
@@ -7097,7 +7118,10 @@ html {
         left: 0rem; } }
 
 #contact {
-  margin: 4rem 0 0 0 0; }
+  margin: 0rem 0 2rem 0; }
+  @media screen and (max-width: 420px) {
+    #contact {
+      margin: 0rem 0 4rem 0; } }
   #contact #sendMailButton {
     background-color: #8e2129;
     color: #edf2f4; }
