@@ -1,3 +1,8 @@
+$.ajaxSetup ({
+  // Disable caching of AJAX responses
+  cache: false
+});
+
 function aboutSWAL() {
   swal({
     title: 'About',
@@ -34,49 +39,164 @@ function exportSWAL() {
 
 // create variables for all category tabs
 let glock = $( '.glock-tabs' );
+
 let colt = $( '.colt-tabs' );
+let coltPistols = $( '.colt-pistols');
+let coltRifles = $( '.colt-rifles');
+let coltRevolvers = $( '.colt-revolvers');
+
 let ruger = $( '.ruger-tabs' );
 let sig = $( '.sig-tabs' );
 let beretta = $( '.beretta-tabs' );
 
+// create variables for all category tabs
+let glockBtn = $('.glock-btn');
+let coltBtn = $( '.colt-btn' );
+let rugerBtn = $( '.ruger-btn' );
+let sigBtn = $( '.sig-btn' );
+let berettaBtn = $( '.beretta-btn' );
+
+let tabButtons = [
+  glockBtn, coltBtn, rugerBtn, sigBtn, berettaBtn
+]
+
+let innerTabButtons = [
+  coltPistols, coltRifles, coltRevolvers
+]
+
+let invContainer = $( '.inventory-target' );
 
 // eventHandler that will toggle the respective category of tabs on catalog.html
-function changeCategory(cat) {
+function changeCategory(cat, isCategory) {
+
+  if(isCategory) {
+    // remove is-active from all tab buttons
+    tabButtons.forEach((button) => {
+      if(button.hasClass('is-active')) {
+        button.removeClass('is-active');
+      }
+    })
+  } else {
+    // remove is-active from all tab buttons
+    innerTabButtons.forEach((button) => {
+      if(button.hasClass('is-active')) {
+        button.removeClass('is-active');
+      }
+    })
+  }
+
+  // toggle tabs based on user's selection
   switch (cat) {
     case 'glock':
       glock.toggle(true);
+      glockBtn.addClass('is-active');
+      loadInventory('glock', '');
       colt.toggle(false);
       ruger.toggle(false);
       sig.toggle(false);
       beretta.toggle(false);
       break;
+
     case 'colt':
-      glock.toggle(false);
       colt.toggle(true);
+      coltBtn.addClass('is-active');
+      loadInventory('colt', '');
+      glock.toggle(false);
       ruger.toggle(false);
       sig.toggle(false);
       beretta.toggle(false);
       break;
+
+      case 'colt-pisols':
+        coltPistols.addClass('is-active');
+        break;
+
+      case 'colt-rifles':
+        coltRifles.addClass('is-active');
+        break;
+
+      case 'colt-revolvers':
+        coltRevolvers.addClass('is-active');
+        break;
+
     case 'ruger':
-      glock.toggle(false);
-      colt.toggle(false);
       ruger.toggle(true);
+      rugerBtn.addClass('is-active');
+      loadInventory('ruger', '');
+      glock.toggle(false);
+      colt.toggle(false);
       sig.toggle(false);
       beretta.toggle(false);
       break;
+
     case 'sig':
+      sig.toggle(true);
+      sigBtn.addClass('is-active');
+      loadInventory('sig', '');
       glock.toggle(false);
       colt.toggle(false);
       ruger.toggle(false);
-      sig.toggle(true);
       beretta.toggle(false);
       break;
+
     case 'beretta':
+      beretta.toggle(true);
+      berettaBtn.addClass('is-active');
+      loadInventory('beretta', '');
       glock.toggle(false);
       colt.toggle(false);
       ruger.toggle(false);
       sig.toggle(false);
-      beretta.toggle(true);
+      break;
+  }
+}
+
+function loadInventory(cat, subCat) {
+  console.log("attempting to load: " + cat + " " + subCat);
+  // load inventory based on user's selection
+  switch (cat) {
+    case 'glock':
+      invContainer.load('inventory_pages/glock-inventory.html');
+      break;
+
+    /////////////////////
+    case 'colt':
+      switch (subCat) {
+        case 'pistols':
+            invContainer.load('inventory_pages/colt-inventory.html #pistols');
+            break;
+      
+          case 'rifles':
+            invContainer.load('inventory_pages/colt-inventory.html #rifles');
+            break;
+      
+          case 'revolvers':
+            invContainer.load('inventory_pages/colt-inventory.html #revolvers');
+            break;
+
+          default:
+            invContainer.load('inventory_pages/colt-inventory.html #pistols');
+            break;
+      }
+      break;
+
+
+    /////////////////////
+
+    case 'ruger':
+
+      break;
+
+    /////////////////////
+
+    case 'sig':
+
+      break;
+
+    /////////////////////
+
+    case 'beretta':
+
       break;
   }
 }
@@ -91,30 +211,43 @@ $( document ).ready( () => {
   sig.toggle();
   beretta.toggle();
 
+  loadInventory('glock', '');
+
   // click handlers for category buttons on catalog.html
-  $('.glock-btn').click(function() {
-    if(glock) {
-      changeCategory('glock');
-    }
+  glockBtn.click(function() {
+      changeCategory('glock', true);
   });
-  $('.colt-btn').click(function() {
-    if(colt) {
-      changeCategory('colt');
-    }
+
+  coltBtn.click(function() {
+      changeCategory('colt', true);
   });
-  $('.ruger-btn').click(function() {
+        coltPistols.click(function() {
+            changeCategory('colt-pistols', false);
+            loadInventory('colt', 'pistols');
+        });
+        coltRifles.click(function() {
+            changeCategory('colt-rifles', false);
+            loadInventory('colt', 'rifles');
+        });
+        coltRevolvers.click(function() {
+            changeCategory('colt-revolvers', false);
+            loadInventory('colt', 'revolvers');
+        });
+
+
+  rugerBtn.click(function() {
     if(ruger) {
-      changeCategory('ruger');
+      changeCategory('ruger', true);
     }
   });
-  $('.sig-btn').click(function() {
+  sigBtn.click(function() {
     if(sig) {
-      changeCategory('sig');
+      changeCategory('sig', true);
     }
   });
-  $('.beretta-btn').click(function() {
+  berettaBtn.click(function() {
     if(beretta) {
-      changeCategory('beretta');
+      changeCategory('beretta', true);
     }
   });
 

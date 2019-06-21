@@ -69,6 +69,16 @@ html {
   }
 }
 
+.mfgFamilyHeading {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 1em;
+}
+
+.mfgFamilyHeading:first-child {
+  margin-top: none;
+}
+
 #landing-title {
   margin: 0.8em;
   font-family: $gunplay;
